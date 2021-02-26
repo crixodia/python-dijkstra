@@ -8,7 +8,7 @@ from graphviz import Graph
 
 def undirected_graph(wmat, name="weighted_undirected_graph"):
     """
-    Creates a pdf file with the weigthted graph's visualization
+    Creates a pdf file with a weigthted graph's visualization
 
     You must have installed graphviz (Python conector and OS compilation)
       OS: https://www.graphviz.org/
@@ -16,7 +16,7 @@ def undirected_graph(wmat, name="weighted_undirected_graph"):
 
     Args:
     wmat  --  weigthted graph's adjacency matrix
-    name  --  (optional) graph's filenma
+    name  --  (optional) graph's filename
     """
     n = len(wmat)
     f = Graph(name, filename=name+'.gv')

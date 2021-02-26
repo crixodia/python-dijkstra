@@ -17,17 +17,17 @@ wmat = [[0, 2, 0, 0, 0, 1, 0, 0],
 
 def find_all(wmat, start, end=-1):
     """
-    Return a tuple with a distances' list and paths' list of
+    Returns a tuple with a distances' list and paths' list of
     all remaining vertices with the same indexing.
 
         (distances, paths)
 
-    For example, distances[x] is the shortest distances from x
-    vertex which shortest path is paths[x]. x is element of
+    For example, distances[x] are the shortest distances from x
+    vertex which shortest path is paths[x]. x is an element of
     {0, 1, ..., n-1} where n is the number of vertices
 
     Args:
-    wmat    --  weigthted graph's adjacency matrix
+    wmat    --  weighted graph's adjacency matrix
     start   --  paths' first vertex
     end     --  (optional) path's end vertex. Return just the 
                 distance and its path
@@ -74,7 +74,7 @@ def find_all(wmat, start, end=-1):
 
 def find_shortest_path(wmat, start, end=-1):
     """
-    Return paths' list of all remaining vertices.
+    Returns paths' list of all remaining vertices.
 
     Args:
     wmat    --  weigthted graph's adjacency matrix
@@ -83,14 +83,14 @@ def find_shortest_path(wmat, start, end=-1):
                 the path
 
     Exceptions:
-    Index out of range, Be careful with start and end vertices
+    Index out of range, Be careful with start and end vertices.
     """
     return find_all(wmat, start, end)[1]
 
 
 def find_shortest_distance(wmat, start, end=-1):
     """
-    Return distances' list of all remaining vertices.
+    Returns distances' list of all remaining vertices.
 
     Args:
     wmat    --  weigthted graph's adjacency matrix
@@ -99,6 +99,6 @@ def find_shortest_distance(wmat, start, end=-1):
                 the distance
 
     Exceptions:
-    Index out of range, Be careful with start and end vertices
+    Index out of range, Be careful with start and end vertices.
     """
     return find_all(wmat, start, end)[0]

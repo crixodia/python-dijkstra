@@ -5,13 +5,13 @@ Dijkstra's algorithm is an algorithm for finding the shortest paths between node
 
 * [How to use dijksta module?](#How-to-use-dijksta-module?)
   * [Find all distances and paths](#Find-all-distances-and-paths)
-  * [Find shortest path](#Find-shortest-path)
-  * [Find shortest distance](#Find-shortest-distance)
+  * [Find the shortest path](#Find-the-shortest-path)
+  * [Find the shortest distance](#Find-the-shortest-distance)
 * [Drawing graphs](#Drawing-graphs)
 
 
 # How to use dijksta module?
-You must represent your graph as adjacency matrix, for example notice this graph with its adjacency matrix:
+You must show your graph as an adjacency matrix. For example, notice this graph with its adjacency matrix:
 
 ![Drag Racing](assets/wgraph.png)
 ![Drag Racing](assets/wmat.png)
@@ -25,20 +25,20 @@ Download [dijkstra.py](https://github.com/crixodia/python-dijkstra/blob/master/d
 dijkstra.find_all(wmat, start, end=-1):
 ```
 
-Return a tuple with a distances' list and paths' list of all remaining vertices with the same indexing.
+Returns a tuple with a distances' list and paths' list of all remaining vertices with the same indexing.
 
         (distances, paths)
 
-For example, distances[x] is the shortest distances from x vertex which shortest path is paths[x]. x is element of {0, 1, ..., n-1} where n is the number of vertices
+For example, distances[x] are the shortest distances from x vertex which shortest path is paths[x]. x is an element of {0, 1, ..., n-1} where n is the number of vertices
 
     Args:
-    wmat    --  weigthted graph's adjacency matrix
+    wmat    --  weighted graph's adjacency matrix
     start   --  paths' first vertex
     end     --  (optional) path's end vertex. Return just the 
                 distance and its path
 
     Exceptions:
-    Index out of range, Be careful with start and end vertices
+    Index out of range, Be careful with start and end vertices.
 
 ### Example code
 ```python
@@ -61,20 +61,20 @@ Output:
 ([0, 2, 4, 4, 6, 1, 6, 5], [[0], [0, 1], [0, 1, 2], [0, 5, 3], [0, 1, 4], [0, 5], [0, 5, 6], [0, 1, 2, 7]])
 ```
 
-## Find shortest path
+## Find the shortest path
 ```python
 dijkstra.find_shortest_path(wmat, start, end=-1):
 ```
-Return paths' list of all remaining vertices.
+Returns paths' list of all remaining vertices.
 
     Args:
-    wmat    --  weigthted graph's adjacency matrix
+    wmat    --  weighted graph's adjacency matrix
     start   --  paths' first vertex
     end     --  (optional) path's end vertex. Return just
                 the path
 
     Exceptions:
-    Index out of range, Be careful with start and end vertices
+    Index out of range, Be careful with start and end vertices.
 
 ### Example code with final vertex
 ```python
@@ -117,20 +117,20 @@ Output:
 [[0], [0, 1], [0, 1, 2], [0, 5, 3], [0, 1, 4], [0, 5], [0, 5, 6], [0, 1, 2, 7]]
 ```
 
-## Find shortest distance
+## Find the shortest distance
 ```python
 dijkstra.find_shortest_distance(wmat, start, end=-1):
 ```
-Return distances' list of all remaining vertices.
+Returns distances' list of all remaining vertices.
 
     Args:
-    wmat    --  weigthted graph's adjacency matrix
+    wmat    --  weighted graph's adjacency matrix
     start   --  paths' first vertex
     end     --  (optional) path's end vertex. Return just
                 the distance
 
     Exceptions:
-    Index out of range, Be careful with start and end vertices
+    Index out of range, Be careful with start and end vertices.
 
 ### Example code with final vertex
 ```python
@@ -177,7 +177,7 @@ Output:
 ```
 # Drawing graphs
 
-In order to get a visual representation using the adjacency matrix, you can use the next module [draw_graph.py](https://github.com/crixodia/python-dijkstra/blob/master/draw_graph.py)
+To get a visual representation using the adjacency matrix, you can use the next module [draw_graph.py](https://github.com/crixodia/python-dijkstra/blob/master/draw_graph.py)
 ```python
 draw_graph.undirected_graph(wmat, name="weighted_undirected_graph")
 ```
